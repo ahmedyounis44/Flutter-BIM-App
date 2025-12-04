@@ -81,7 +81,7 @@ class _HomescreenState extends State<Homescreen> {
                     onChanged: (value) {},
                     activeColor: Color(0xffE83D67),
                     inactiveColor: Colors.white,
-                    onChangeEnd: ,
+                    onChangeEnd:(value){} ,
                   ),
                 ],
               ),
