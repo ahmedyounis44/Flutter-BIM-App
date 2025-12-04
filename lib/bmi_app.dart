@@ -12,7 +12,7 @@ class BmiApp extends StatelessWidget {
         brightness: Brightness.dark,
         scaffoldBackgroundColor:Color(0XFF1C2135)
       ),
-      home: Homescreen() //ResultScreen()
+      home: Homescreen()  //ResultScreen()
       );
      
   }

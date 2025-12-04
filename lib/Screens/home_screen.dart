@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/widgets/calculate_button.dart';
 import 'package:flutterapp/widgets/counter_box.dart';
 import 'package:flutterapp/widgets/custom_app_bar.dart';
 import 'package:flutterapp/widgets/gender_box.dart';
@@ -75,12 +76,12 @@ class _HomescreenState extends State<Homescreen> {
                       ],
                     ),
                   ),
-
                   Slider(
                     value: .7,
                     onChanged: (value) {},
                     activeColor: Color(0xffE83D67),
                     inactiveColor: Colors.white,
+                    onChangeEnd: ,
                   ),
                 ],
               ),
@@ -97,19 +98,7 @@ class _HomescreenState extends State<Homescreen> {
           ],
         ),
       ),
-      bottomNavigationBar: Container(
-        height: 100,
-        color: Color(0xffE83D67),
-        alignment: Alignment.center,
-        child: Text(
-          "Calculate",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 32,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-      ),
+      bottomNavigationBar: CalculateButton(text: "Calculate",)
     );
   }
 }
