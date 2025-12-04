@@ -3,6 +3,7 @@ import 'package:flutterapp/widgets/calculate_button.dart';
 import 'package:flutterapp/widgets/counter_box.dart';
 import 'package:flutterapp/widgets/custom_app_bar.dart';
 import 'package:flutterapp/widgets/gender_box.dart';
+import 'package:flutterapp/widgets/slider_block.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -13,6 +14,7 @@ class Homescreen extends StatefulWidget {
 
 class _HomescreenState extends State<Homescreen> {
   bool ismale=true;
+  int height=150;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +61,7 @@ class _HomescreenState extends State<Homescreen> {
                     TextSpan(
                       children: [
                         TextSpan(
-                          text: "150",
+                          text: height.toString(),
                           style: TextStyle(
                             fontSize: 40,
                             fontWeight: FontWeight.w700,
@@ -76,13 +78,11 @@ class _HomescreenState extends State<Homescreen> {
                       ],
                     ),
                   ),
-                  Slider(
-                    value: .7,
-                    onChanged: (value) {},
-                    activeColor: Color(0xffE83D67),
-                    inactiveColor: Colors.white,
-                    onChangeEnd:(value){} ,
-                  ),
+                  SliderBlock(height: height,onChanged: (value) {
+                    setState(() {
+                      height=value.round();
+                    });
+                  },)
                 ],
               ),
             ),
