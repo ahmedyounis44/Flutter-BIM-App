@@ -15,6 +15,8 @@ class Homescreen extends StatefulWidget {
 class _HomescreenState extends State<Homescreen> {
   bool ismale=true;
   int height=150;
+  int age=10;
+  int weight=20;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,15 +92,35 @@ class _HomescreenState extends State<Homescreen> {
             SizedBox(height: 20),
             Row(
               children: [
-                CounterBox(title: "Weight", value: 60),
+                CounterBox(title: "Weight", value: weight,
+                onPressed: () {
+                  setState(() {
+                    weight=weight-1;
+                  });
+                },
+                plusonPressed: () {
+                 setState(() {
+                    weight=weight+1;
+                  });
+                },),
                 SizedBox(width: 10),
-                CounterBox(title: "Age", value: 20),
+                CounterBox(title: "Age", value: age,
+                 onPressed: () {
+                  setState(() {
+                    age=age-1;
+                  });
+                },
+                plusonPressed: () {
+                 setState(() {
+                    age=age+1;
+                  });
+                },),
               ],
             ),
           ],
         ),
       ),
-      bottomNavigationBar: CalculateButton(text: "Calculate",)
+      bottomNavigationBar: CalculateButton(text: "Calculate",routename: '/Result',)
     );
   }
 }

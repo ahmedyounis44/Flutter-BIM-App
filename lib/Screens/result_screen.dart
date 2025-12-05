@@ -67,7 +67,7 @@ class ResultScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: CalculateButton(text: "Re - Calculate",)
+      bottomNavigationBar: CalculateButton(text: "Re - Calculate", routename: '/',)
     );
   }
 }

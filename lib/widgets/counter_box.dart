@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 class CounterBox extends StatelessWidget {
   final String title;
   final int value;
+  final Function ()? plusonPressed ;
+  final Function ()? onPressed ;
 
-  const CounterBox({super.key, required this.title, required this.value});
+  const CounterBox({super.key, required this.title, required this.value,this.onPressed,this.plusonPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +42,8 @@ class CounterBox extends StatelessWidget {
               children: [
                
                  FloatingActionButton.small(
-                    onPressed: () {},
+                  heroTag: "",
+                    onPressed: onPressed,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(100),
                     ),
@@ -52,7 +55,8 @@ class CounterBox extends StatelessWidget {
               
              
                  FloatingActionButton.small(
-                    onPressed: () {},
+                  heroTag: "",
+                    onPressed: plusonPressed,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(100),
                     ),
