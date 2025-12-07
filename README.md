@@ -1,10 +1,12 @@
 # flutterapp
 
-A new Flutter project.
+BMI Flutter project.
 
 ## Getting Started
 
-this BMI APP 
+This BMI APP Record
+
+<video controls src="untitled.webm" title=""></video>
 
 Home Screen 
 
