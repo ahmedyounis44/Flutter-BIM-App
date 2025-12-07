@@ -6,7 +6,11 @@ BMI Flutter project.
 
 This BMI APP Record
 
-<video controls src="untitled.webm" title=""></video>
+
+
+https://github.com/user-attachments/assets/b9ee1069-3b82-4606-a183-936acb3270d6
+
+
 
 Home Screen 
 
