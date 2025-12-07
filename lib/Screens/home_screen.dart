@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutterapp/widgets/calculate_button.dart';
 import 'package:flutterapp/widgets/counter_box.dart';
@@ -95,24 +97,24 @@ class _HomescreenState extends State<Homescreen> {
                 CounterBox(title: "Weight", value: weight,
                 onPressed: () {
                   setState(() {
-                    weight=weight-1;
+                    weight>1?weight--:weight;
                   });
                 },
                 plusonPressed: () {
                  setState(() {
-                    weight=weight+1;
+                    weight<200?weight++:weight;
                   });
                 },),
                 SizedBox(width: 10),
                 CounterBox(title: "Age", value: age,
                  onPressed: () {
                   setState(() {
-                    age=age-1;
+                    age>1?age--:age;
                   });
                 },
                 plusonPressed: () {
                  setState(() {
-                    age=age+1;
+                    age<100?age++:age;
                   });
                 },),
               ],
@@ -120,7 +122,9 @@ class _HomescreenState extends State<Homescreen> {
           ],
         ),
       ),
-      bottomNavigationBar: CalculateButton(text: "Calculate",routename: '/Result',)
+      bottomNavigationBar: CalculateButton(text: "Calculate",routename: '/Result',
+      bmi:(weight/pow((height/100),2)),
+      )
     );
   }
 }

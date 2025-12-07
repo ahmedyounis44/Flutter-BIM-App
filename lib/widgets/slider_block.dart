@@ -10,8 +10,8 @@ class SliderBlock extends StatelessWidget {
   Widget build(BuildContext context) {
     return Slider(
       value: height.toDouble(),
-      min: 100,
-      max: 220,
+      min: 0,
+      max: 250,
       onChanged: onChanged,
       activeColor: Color(0xffE83D67),
       inactiveColor: Colors.white,

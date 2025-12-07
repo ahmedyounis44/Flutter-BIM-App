@@ -42,7 +42,7 @@ class CounterBox extends StatelessWidget {
               children: [
                
                  FloatingActionButton.small(
-                  heroTag: null,
+                  heroTag: '$title 1',
                     onPressed: onPressed,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(100),
@@ -55,7 +55,7 @@ class CounterBox extends StatelessWidget {
               
              
                  FloatingActionButton.small(
-                  heroTag: null,
+                  heroTag: '$title 2',
                     onPressed: plusonPressed,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(100),

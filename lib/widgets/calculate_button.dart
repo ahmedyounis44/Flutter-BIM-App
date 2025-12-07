@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CalculateButton extends StatelessWidget {
-  const CalculateButton({super.key, required this.text,required this.routename});
+  const CalculateButton({
+    super.key,
+    required this.text,
+    required this.routename,
+    this.bmi
+  });
 
   final String text;
   final String routename;
+  final double? bmi;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +29,12 @@ class CalculateButton extends StatelessWidget {
         ),
       ),
       onTap: () {
-         Navigator.pushNamed(context, routename);
+        if (routename == '/Result') {
+          Navigator.pushNamed(context, routename, arguments: {'bmi': bmi});
+        } else {
+          Navigator.pushNamed(context, routename);
+        }
+        
       },
     );
   }
